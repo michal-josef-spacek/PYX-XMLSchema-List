@@ -38,7 +38,6 @@ sub new {
 		},
 		'non_parser_options' => {
 			'schemas' => {},
-			'stack' => [],
 		},
 		'output_handler' => $self->{'output_handler'},
 	);
@@ -112,9 +111,9 @@ sub _call_attribute {
 sub _call_final {
 	my $pyx_parser_obj = shift;
 	my $schemas_hr = $pyx_parser_obj->{'non_parser_options'}->{'schemas'};
+	my $out = $pyx_parser_obj->{'output_handler'};
 	my $max_len = length reduce { length($a) > length($b) ? $a : $b }
 		keys %{$schemas_hr};
-	my $out = $pyx_parser_obj->{'output_handler'};
 	foreach my $key (sort keys %{$schemas_hr}) {
 		printf {$out} "[ %-${max_len}s ] (E: %04d, A: %04d)%s\n", $key,
 			$schemas_hr->{$key}->[1]->{'element'},

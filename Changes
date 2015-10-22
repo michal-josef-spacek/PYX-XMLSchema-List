@@ -2,6 +2,7 @@
  - Add reset() method.
  - Add stats() method.
  - Add tests.
+ - Clean and optimalize code.
  - Fix output (trailing whitespace on end of line).
  - Improve SEE ALSO section in doc.
  - Move author tests to xt/ directory.
