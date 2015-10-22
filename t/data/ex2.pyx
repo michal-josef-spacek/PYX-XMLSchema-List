@@ -1,9 +1,9 @@
 (foo
 Axmlns:bar http://bar.foo
-Axmlns:foo http://foo.bar
-Afoo:bar baz
-(foo:bar
+Axmlns:fo http://foo.bar
+Afo:bar baz
+(fo:bar
 Axml:lang en
 Abar:foo baz
-)foo:bar
+)fo:bar
 )foo

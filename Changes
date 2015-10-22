@@ -4,6 +4,7 @@
  - Add tests.
  - Clean and optimalize code.
  - Fix output (trailing whitespace on end of line).
+ - Improve tests to better coverity.
  - Improve SEE ALSO section in doc.
  - Move author tests to xt/ directory.
  - Update Module::Install to 1.16 version.

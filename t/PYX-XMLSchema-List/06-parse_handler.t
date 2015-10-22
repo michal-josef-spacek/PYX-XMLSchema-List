@@ -31,7 +31,7 @@ close $pyx_handler;
 # Test.
 $right_ret = <<'END';
 [ bar ] (E: 0000, A: 0001) http://bar.foo
-[ foo ] (E: 0001, A: 0001) http://foo.bar
+[ fo  ] (E: 0001, A: 0001) http://foo.bar
 [ xml ] (E: 0000, A: 0001)
 END
 open $pyx_handler, '<', $data_dir->file('ex2.pyx')->s;
