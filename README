@@ -74,7 +74,10 @@ DEPENDENCIES
     Class::Utils, Error::Pure, List::Util, PYX::Parser, Readonly.
 
 SEE ALSO
-    Task::PYX.
+    PYX A perl module for PYX handling.
+
+    Task::PYX
+        Install the PYX modules.
 
 REPOSITORY
     <https://github.com/tupinek/PYX-XMLSchema-List>
