@@ -5,7 +5,7 @@ use warnings;
 # Modules.
 use File::Object;
 use PYX::XMLSchema::List;
-use Test::More 'tests' => 3;
+use Test::More 'tests' => 4;
 use Test::NoWarnings;
 use Test::Output;
 
@@ -43,5 +43,21 @@ stdout_is(
 	$right_ret,
 	'Parse ex2.pyx file handler.',
 );
+close $pyx_handler;
 $obj->reset;
+
+# Test.
+$right_ret = <<'END';
+[ foo ] (E: 0001, A: 0000) http://foo
+END
+open $pyx_handler, '<', $data_dir->file('ex3.pyx')->s;
+stdout_is(
+	sub {
+		$obj->parse_handler($pyx_handler);
+		return;
+	},
+	$right_ret,
+	'Parse ex3.pyx file handler.',
+);
+close $pyx_handler;
 $obj->reset;

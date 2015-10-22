@@ -5,7 +5,7 @@ use warnings;
 # Modules.
 use File::Object;
 use PYX::XMLSchema::List;
-use Test::More 'tests' => 3;
+use Test::More 'tests' => 4;
 use Test::NoWarnings;
 use Test::Output;
 
@@ -39,5 +39,19 @@ stdout_is(
 	},
 	$right_ret,
 	'Parse ex2.pyx file.',
+);
+$obj->reset;
+
+# Test.
+$right_ret = <<'END';
+[ foo ] (E: 0001, A: 0000) http://foo
+END
+stdout_is(
+	sub {
+		$obj->parse_file($data_dir->file('ex3.pyx')->s);
+		return;
+	},
+	$right_ret,
+	'Parse ex3.pyx file.',
 );
 $obj->reset;
