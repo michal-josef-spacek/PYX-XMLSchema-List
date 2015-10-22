@@ -1,5 +1,6 @@
 0.02
  - Add reset() method.
+ - Add stats() method.
  - Add tests.
  - Fix output (trailing whitespace on end of line).
  - Improve SEE ALSO section in doc.

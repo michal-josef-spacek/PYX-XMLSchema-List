@@ -9,6 +9,7 @@ SYNOPSIS
      $obj->parse_file($input_file, $out);
      $obj->parse_handle($input_file_handler, $out);
      $obj->reset;
+     my $stats_hr = $obj->stats;
 
 METHODS
     "new(%parameters)"
@@ -36,6 +37,10 @@ METHODS
 
     "reset()"
              Resets internal structure with statistics.
+             Returns undef.
+
+    "stats()"
+             Gets statistics structure.
              Returns undef.
 
 ERRORS

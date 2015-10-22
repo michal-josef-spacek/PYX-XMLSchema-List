@@ -75,6 +75,14 @@ sub reset {
 	return;
 }
 
+# Gets statistics structure.
+sub stats {
+	my $self = shift;
+	my $schemas_hr = $self->{'_pyx_parser'}->{'non_parser_options'}
+		->{'schemas'};
+	return $schemas_hr;
+}
+
 # Attribute callback.
 sub _call_attribute {
 	my ($pyx_parser_obj, $key, $val) = @_;
@@ -176,6 +184,7 @@ PYX::XMLSchema::List - Processing PYX data or file and print list of XML schemas
  $obj->parse_file($input_file, $out);
  $obj->parse_handle($input_file_handler, $out);
  $obj->reset;
+ my $stats_hr = $obj->stats;
 
 =head1 METHODS
 
@@ -215,6 +224,11 @@ PYX::XMLSchema::List - Processing PYX data or file and print list of XML schemas
 =item C<reset()>
 
  Resets internal structure with statistics.
+ Returns undef.
+
+=item C<stats()>
+
+ Gets statistics structure.
  Returns undef.
 
 =back
