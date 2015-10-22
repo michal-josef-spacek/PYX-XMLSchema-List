@@ -20,11 +20,14 @@ README
 SIGNATURE
 t/data/ex1.pyx
 t/data/ex2.pyx
+t/data/ex3.pyx
 t/PYX-XMLSchema-List/01-use.t
 t/PYX-XMLSchema-List/02-version.t
 t/PYX-XMLSchema-List/03-new.t
 t/PYX-XMLSchema-List/04-parse.t
 t/PYX-XMLSchema-List/05-parse_file.t
 t/PYX-XMLSchema-List/06-parse_handler.t
+t/PYX-XMLSchema-List/07-reset.t
+t/PYX-XMLSchema-List/08-stats.t
 xt/PYX-XMLSchema-List/01-pod_coverage.t
 xt/PYX-XMLSchema-List/02-pod.t
