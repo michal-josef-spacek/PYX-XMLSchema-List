@@ -28,6 +28,8 @@ resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
 	'?Name=PYX-XMLSchema-List';
 resources 'homepage' => 'https://github.com/tupinek/PYX-XMLSchema-List';
 resources 'repository' => 'git://github.com/tupinek/PYX-XMLSchema-List';
+test_requires 'English' => 0;
+test_requires 'Error::Pure::Utils' => 0.22;
 test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
 tests_recursive;
