@@ -68,6 +68,13 @@ sub parse_handler {
 	return;
 }
 
+# Reset parser.
+sub reset {
+	my $self = shift;
+	$self->{'_pyx_parser'}->{'non_parser_options'}->{'schemas'} = {};
+	return;
+}
+
 # Attribute callback.
 sub _call_attribute {
 	my ($pyx_parser_obj, $key, $val) = @_;
@@ -168,6 +175,7 @@ PYX::XMLSchema::List - Processing PYX data or file and print list of XML schemas
  $obj->parse($pyx, $out);
  $obj->parse_file($input_file, $out);
  $obj->parse_handle($input_file_handler, $out);
+ $obj->reset;
 
 =head1 METHODS
 
@@ -202,6 +210,11 @@ PYX::XMLSchema::List - Processing PYX data or file and print list of XML schemas
 
  Parse PYX handler and print list of XML schemas of PYX input.
  If $out not present, use 'output_handler'.
+ Returns undef.
+
+=item C<reset()>
+
+ Resets internal structure with statistics.
  Returns undef.
 
 =back

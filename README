@@ -8,6 +8,7 @@ SYNOPSIS
      $obj->parse($pyx, $out);
      $obj->parse_file($input_file, $out);
      $obj->parse_handle($input_file_handler, $out);
+     $obj->reset;
 
 METHODS
     "new(%parameters)"
@@ -31,6 +32,10 @@ METHODS
     "parse_handler($input_file_handler[, $out])"
              Parse PYX handler and print list of XML schemas of PYX input.
              If $out not present, use 'output_handler'.
+             Returns undef.
+
+    "reset()"
+             Resets internal structure with statistics.
              Returns undef.
 
 ERRORS

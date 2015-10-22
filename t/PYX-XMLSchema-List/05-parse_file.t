@@ -40,3 +40,4 @@ stdout_is(
 	$right_ret,
 	'Parse ex2.pyx file.',
 );
+$obj->reset;
