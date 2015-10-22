@@ -13,6 +13,7 @@ use Readonly;
 
 # Constants.
 Readonly::Scalar our $EMPTY_STR => q{};
+Readonly::Scalar our $SPACE => q{ };
 
 # Version.
 our $VERSION = 0.02;
@@ -100,10 +101,12 @@ sub _call_final {
 		keys %{$schemas_hr};
 	my $out = $pyx_parser_obj->{'output_handler'};
 	foreach my $key (sort keys %{$schemas_hr}) {
-		printf {$out} "[ %-${max_len}s ] (E: %04d, A: %04d) %s\n", $key,
+		printf {$out} "[ %-${max_len}s ] (E: %04d, A: %04d)%s\n", $key,
 			$schemas_hr->{$key}->[1]->{'element'},
 			$schemas_hr->{$key}->[1]->{'attr'},
-			$schemas_hr->{$key}->[0];
+			$schemas_hr->{$key}->[0] ne $EMPTY_STR
+				? $SPACE.$schemas_hr->{$key}->[0]
+				: $EMPTY_STR;
 	}
 	if (! keys %{$schemas_hr}) {
 		print {$out} "No XML schemas.\n";
