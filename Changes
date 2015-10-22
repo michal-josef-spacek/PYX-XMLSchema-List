@@ -1,4 +1,4 @@
-0.02
+0.02 2015-10-22T19:44:43+02:00
  - Add reset() method.
  - Add stats() method.
  - Add tests.
