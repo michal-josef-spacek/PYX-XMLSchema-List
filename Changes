@@ -1,5 +1,5 @@
 0.04
- - Fix warning in <5.12.0 perls in length(undef).
+ - Fix warning in length(undef).
 
 0.03 2015-10-25T09:23:29+01:00
  - Fix test requires.
