@@ -2,10 +2,12 @@ TODO
 ====
 1. Flag v konstruktoru, ktery zpusobi vypisovani jenom XML schemat, ktere jsou
    pouzita.
-3. Otestovat, kde je problem v 5.10 a 5.8 verzi Perlu.
 4.
 
 Applied
 =======
 2. Testy.
 OK [20151022] skim
+
+3. Otestovat, kde je problem v 5.10 a 5.8 verzi Perlu.
+OK [20151029] skim
