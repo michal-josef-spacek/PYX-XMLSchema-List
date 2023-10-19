@@ -175,6 +175,7 @@ PYX::XMLSchema::List - Processing PYX data or file and print list of XML schemas
 =head1 SYNOPSIS
 
  use PYX::XMLSchema::List;
+
  my $obj = PYX::XMLSchema::List->new(%parameters);
  $obj->parse($pyx, $out);
  $obj->parse_file($input_file, $out);
