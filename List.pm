@@ -238,6 +238,8 @@ PYX::XMLSchema::List - Processing PYX data or file and print list of XML schemas
 
 =head1 EXAMPLE1
 
+=for comment filename=list_xml_schemas.pl
+
  use strict;
  use warnings;
 
