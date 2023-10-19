@@ -8,41 +8,61 @@ SYNOPSIS
      my $obj = PYX::XMLSchema::List->new(%parameters);
      $obj->parse($pyx, $out);
      $obj->parse_file($input_file, $out);
-     $obj->parse_handle($input_file_handler, $out);
+     $obj->parse_handler($input_file_handler, $out);
      $obj->reset;
      my $stats_hr = $obj->stats;
 
 METHODS
-    "new(%parameters)"
-             Constructor.
+  "new"
+     my $obj = PYX::XMLSchema::List->new(%parameters);
 
-            *       "output_handler"
+    Constructor.
 
-                     Output handler.
-                     Default value is \*STDOUT.
+    *       "output_handler"
 
-    "parse($pyx[, $out])"
-             Parse PYX text or array of PYX text and print list of XML schemas of PYX input.
-             If $out not present, use 'output_handler'.
-             Returns undef.
+            Output handler.
 
-    "parse_file($input_file[, $out])"
-             Parse file with PYX data and print list of XML schemas of PYX input.
-             If $out not present, use 'output_handler'.
-             Returns undef.
+            Default value is \*STDOUT.
 
-    "parse_handler($input_file_handler[, $out])"
-             Parse PYX handler and print list of XML schemas of PYX input.
-             If $out not present, use 'output_handler'.
-             Returns undef.
+    Returns instance of object.
 
-    "reset()"
-             Resets internal structure with statistics.
-             Returns undef.
+  "parse"
+     $obj->parse($pyx, $out);
 
-    "stats()"
-             Gets statistics structure.
-             Returns undef.
+    Parse PYX text or array of PYX text and print list of XML schemas of PYX
+    input. If $out not present, use 'output_handler'.
+
+    Returns undef.
+
+  "parse_file"
+     $obj->parse_file($input_file, $out);
+
+    Parse file with PYX data and print list of XML schemas of PYX input. If
+    $out not present, use 'output_handler'.
+
+    Returns undef.
+
+  "parse_handler"
+     $obj->parse_handler($input_file_handler, $out);
+
+    Parse PYX handler and print list of XML schemas of PYX input. If $out
+    not present, use 'output_handler'.
+
+    Returns undef.
+
+  "reset"
+     $obj->reset;
+
+    Resets internal structure with statistics.
+
+    Returns undef.
+
+  "stats"
+     my $stats_hr = $obj->stats;
+
+    Gets statistics structure.
+
+    Returns undef.
 
 ERRORS
      new():

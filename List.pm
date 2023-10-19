@@ -179,56 +179,72 @@ PYX::XMLSchema::List - Processing PYX data or file and print list of XML schemas
  my $obj = PYX::XMLSchema::List->new(%parameters);
  $obj->parse($pyx, $out);
  $obj->parse_file($input_file, $out);
- $obj->parse_handle($input_file_handler, $out);
+ $obj->parse_handler($input_file_handler, $out);
  $obj->reset;
  my $stats_hr = $obj->stats;
 
 =head1 METHODS
 
-=over 8
+=head2 C<new>
 
-=item C<new(%parameters)>
+ my $obj = PYX::XMLSchema::List->new(%parameters);
 
- Constructor.
+Constructor.
 
 =over 8
 
 =item * C<output_handler>
 
- Output handler.
- Default value is \*STDOUT.
+Output handler.
+
+Default value is \*STDOUT.
 
 =back
 
-=item C<parse($pyx[, $out])>
+Returns instance of object.
 
- Parse PYX text or array of PYX text and print list of XML schemas of PYX input.
- If $out not present, use 'output_handler'.
- Returns undef.
+=head2 C<parse>
 
-=item C<parse_file($input_file[, $out])>
+ $obj->parse($pyx, $out);
 
- Parse file with PYX data and print list of XML schemas of PYX input.
- If $out not present, use 'output_handler'.
- Returns undef.
+Parse PYX text or array of PYX text and print list of XML schemas of PYX input.
+If C<$out> not present, use 'output_handler'.
 
-=item C<parse_handler($input_file_handler[, $out])>
+Returns undef.
 
- Parse PYX handler and print list of XML schemas of PYX input.
- If $out not present, use 'output_handler'.
- Returns undef.
+=head2 C<parse_file>
 
-=item C<reset()>
+ $obj->parse_file($input_file, $out);
 
- Resets internal structure with statistics.
- Returns undef.
+Parse file with PYX data and print list of XML schemas of PYX input.
+If C<$out> not present, use 'output_handler'.
 
-=item C<stats()>
+Returns undef.
 
- Gets statistics structure.
- Returns undef.
+=head2 C<parse_handler>
 
-=back
+ $obj->parse_handler($input_file_handler, $out);
+
+Parse PYX handler and print list of XML schemas of PYX input.
+If C<$out> not present, use 'output_handler'.
+
+Returns undef.
+
+=head2 C<reset>
+
+ $obj->reset;
+
+Resets internal structure with statistics.
+
+Returns undef.
+
+=head2 C<stats>
+
+ my $stats_hr = $obj->stats;
+
+Gets statistics structure.
+
+Returns undef.
 
 =head1 ERRORS
 

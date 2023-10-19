@@ -1,5 +1,6 @@
 0.05
  - Improve LICENSE AND COPYRIGHT section in doc.
+ - Improve METHODS section in doc.
  - Improve SYNOPSIS section in doc.
  - Move bugtracker to github.
  - Rename example to better name.
