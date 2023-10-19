@@ -35,8 +35,8 @@ requires:
   Readonly: 0
   perl: 5.6.0
 resources:
-  bugtracker: https://github.com/tupinek/PYX-XMLSchema-List/issues
-  homepage: https://github.com/tupinek/PYX-XMLSchema-List
+  bugtracker: https://github.com/michal-josef-spacek/PYX-XMLSchema-List/issues
+  homepage: https://github.com/michal-josef-spacek/PYX-XMLSchema-List
   license: http://opensource.org/licenses/bsd-license.php
-  repository: git://github.com/tupinek/PYX-XMLSchema-List
+  repository: git://github.com/michal-josef-spacek/PYX-XMLSchema-List
 version: '0.05'

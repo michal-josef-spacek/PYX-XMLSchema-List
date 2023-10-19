@@ -291,7 +291,7 @@ Install the PYX modules.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/PYX-XMLSchema-List>
+L<https://github.com/michal-josef-spacek/PYX-XMLSchema-List>
 
 =head1 AUTHOR
 
