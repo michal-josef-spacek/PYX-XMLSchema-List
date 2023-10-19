@@ -49,11 +49,9 @@ ERRORS
                      Unknown parameter '%s'.
 
 EXAMPLE1
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use PYX::XMLSchema::List;
 
      # Example data.

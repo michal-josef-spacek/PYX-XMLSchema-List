@@ -1,10 +1,8 @@
 package PYX::XMLSchema::List;
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Modules.
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
 use List::Util qw(reduce);
@@ -15,7 +13,6 @@ use Readonly;
 Readonly::Scalar our $EMPTY_STR => q{};
 Readonly::Scalar our $SPACE => q{ };
 
-# Version.
 our $VERSION = 0.05;
 
 # Constructor.
@@ -240,11 +237,9 @@ PYX::XMLSchema::List - Processing PYX data or file and print list of XML schemas
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use PYX::XMLSchema::List;
 
  # Example data.
